@@ -1,0 +1,109 @@
+
+* { box-sizing: border-box; 
+    margin: 0; 
+    padding: 0; 
+}
+html, body {
+     height: 100%; 
+    }
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: monospace;
+    background: black;
+    color: #16324f;
+    padding: 32px;
+}
+
+main {
+    width: 100%;
+    max-width: 420px;
+}
+
+.card {
+    background: linear-gradient(180deg, rgba(255,255,255,0.9), #fff);
+    border-radius: 16px;
+    padding: 28px;
+    box-shadow: 0 10px 30px rgba(19, 45, 66, 0.12);
+    border: 1px solid rgba(20, 60, 90, 0.04);
+    overflow: hidden;
+}
+
+.card p {
+    font-size: 15px;
+    line-height: 1.45;
+    color: #234b6b;
+    margin-bottom: 18px;
+}
+.card p span {
+    font-weight: 700;
+    color: #0b66a3;
+    background: linear-gradient(90deg, #bde6fe, #d8e7fa);
+    padding: 3px 8px;
+    border-radius: 8px;
+    font-size: 13px;
+    margin-left: 6px;
+    display: inline-block;
+}
+
+.baxa {
+    width: 100%;
+    height: 14px;
+    background: linear-gradient(90deg, rgba(2,34,57,0.04), rgba(2,34,57,0.02));
+    border-radius: 999px;
+    padding: 3px;
+    margin-bottom: 18px;
+    border: 1px solid rgba(7, 36, 62, 0.03);
+}
+
+.loading {
+    height: 100%;
+    width: 0%; 
+    border-radius: 999px;
+    background: linear-gradient(90deg, #42c4ff, #0066ff 60%, #7b61ff);
+    box-shadow: 0 6px 18px rgba(66,196,255,0.12), inset 0 -4px 12px rgba(255,255,255,0.12);
+    transition: width 450ms cubic-bezier(.22,.9,.32,1);
+}
+
+.bottom {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    margin-top: 6px;
+}
+
+.bottom h2 {
+    font-size: 20px;
+    font-weight: 700;
+    color: #08324a;
+    min-width: 56px;
+    text-align: left;
+    margin: 0;
+}
+
+button {
+    appearance: none;
+    -webkit-appearance: none;
+    border: none;
+    padding: 10px 18px;
+    font-weight: 600;
+    font-size: 15px;
+    border-radius: 10px;
+    cursor: pointer;
+    background: linear-gradient(180deg, #0b79d0, #005bb3);
+    color: #fff;
+    box-shadow: 0 8px 20px rgba(11,121,208,0.18);
+    transition: all 300ms ease-in-out;
+}
+
+
+button:active {
+    scale: 0.95;
+}
+
+button:hover {  
+    box-shadow: 0 12px 30px rgba(11, 130, 220, 0.63);
+}
+

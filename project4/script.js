@@ -65,3 +65,7 @@ button.addEventListener("click", function(){
 });
 
 
+// button.addEventListener("contextmenu", function(e) {
+//     e.preventDefault();
+//     main.querySelectorAll("h1").forEach(h => h.remove());
+// });
