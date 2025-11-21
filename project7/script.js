@@ -61,6 +61,7 @@ let users = [
 
 
 let main = document.querySelector('main');
+let content = document.querySelector('.content');
 
 sum=''
 
@@ -88,11 +89,11 @@ users.forEach(function(user){
                 <li class="tag">${user.tags[4]}</li>
             </ul>
         </div>
-    </div>`
+    </div>  `
 
 
 
-main.innerHTML = sum;
+content.innerHTML = sum;
 
 })
 
@@ -121,10 +122,23 @@ friend.forEach(function(btn){
             check = 0;
         }
     });
+
+
+    
 });
 
 
 
+let cursor = document.querySelector('.cursor');
 
+main.addEventListener("mousemove",function(e){
+  // console.log(e.x,e.y);
+  main.style.cursor = "none";
+
+
+  cursor.style.left = e.x+"px";
+  cursor.style.top = e.y+"px";
+  
+})
 
 
