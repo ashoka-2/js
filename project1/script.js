@@ -47,7 +47,3 @@ dec.addEventListener('click',function(){
 
 
 
-
-
-
-

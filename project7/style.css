@@ -90,6 +90,27 @@ main{
 
     white-space: nowrap;
 }
+
+.author-info{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.friend{
+    padding: 6px 12px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: #fff;
+    background-color: var(--accent);
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(37,99,235,0.3);
+    transition: background-color 220ms ease;
+}
+
+
 .profession{
     margin: 0;
     font-size: 0.95rem;

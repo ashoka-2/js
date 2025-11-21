@@ -72,7 +72,10 @@ users.forEach(function(user){
         </div>
 
         <div class="profile-content">
+            <div class="author-info">
             <h2 class="full-name">${user.fullName}</h2>
+            <button class="friend">Add Friend</button>
+            </div>
             <p class="profession">${user.profession}</p>
 
             <p class="description">${user.description}}</p>
@@ -98,6 +101,27 @@ main.innerHTML = sum;
 
 
 
+
+let friend = document.querySelectorAll('.friend');
+
+let check = 0
+
+friend.forEach(function(btn){
+    let check = 0;
+
+    btn.addEventListener('click', function(){
+        if(check === 0){
+            btn.innerHTML = "Following";
+            btn.style.backgroundColor = "green";
+            check = 1;
+        } else {
+            btn.innerHTML = "Add Friend";
+            btn.style.backgroundColor = "#2563eb";
+
+            check = 0;
+        }
+    });
+});
 
 
 
