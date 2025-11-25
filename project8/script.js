@@ -1,7 +1,7 @@
 
 
 
-let users = [
+let reels = [
     {
     username: "muskankaria",
     profileImage: "/js/project8/videos/muskan.jpg",
@@ -159,7 +159,7 @@ let allReels = document.querySelector(".all-reels");
 
 function addData(){
   let sum =''
-users.forEach(function(user,idx){
+reels.forEach(function(reel,idx){
 
   sum = sum + `
                 <div class="reel">
@@ -170,14 +170,14 @@ users.forEach(function(user,idx){
 
           <div class="play visible"><i class="ri-play-fill"></i></div>
           
-          <video autoplay loop muted class="main-video" src="${user.video}"></video>
+          <video autoplay loop muted class="main-video" src="${reel.video}"></video>
                 <div class="bottom">
                     <div class="user">
-                        <img class="avatar" src="${user.profileImage}" alt="image">
-                        <h4>${user.username}</h4>
-                        <button class="follow">${user.isFollowed?"Following":"Follow"}</button>
+                        <img class="avatar" src="${reel.profileImage}" alt="image">
+                        <h4>${reel.username}</h4>
+                        <button class="follow">${reel.isFollowed?"Following":"Follow"}</button>
                     </div>
-                    <p class="description">${user.description}</p>
+                    <p class="description">${reel.description}</p>
 
 
 
@@ -187,12 +187,12 @@ users.forEach(function(user,idx){
     <i class="ri-music-2-fill"></i>
 
     <div class="marquee">
-        <div class="marquee-inner">${user.musicName}</div>
+        <div class="marquee-inner">${reel.musicName}</div>
     </div>
     
 </div>
 <div class="music-img">
-    <img class="music-avatar" src="${user.musicImage}" alt="image">
+    <img class="music-avatar" src="${reel.musicImage}" alt="image">
         
     </div>
 </section>
@@ -204,18 +204,18 @@ users.forEach(function(user,idx){
                     <div class="right"></div>
                         <div class="reel-actions">
                             <button id=${idx} class="action like">
-                                ${user.isLiked?'<i class="redlove   ri-heart-3-fill"></i>':'<i class="ri-heart-3-line"></i>'}
-                                <span>${user.likes}</span>
+                                ${reel.isLiked?'<i class="redlove   ri-heart-3-fill"></i>':'<i class="ri-heart-3-line"></i>'}
+                                <span>${reel.likes}</span>
                             </button>
 
                             <button class="action comment" >
                                 <i class="ri-chat-3-line"></i>
-                                <span>${user.comments}</span>
+                                <span>${reel.comments}</span>
                             </button>
 
                             <button class="action share">
                                 <i class="ri-share-forward-line"></i>
-                                <span>${user.shareCount}</span>
+                                <span>${reel.shareCount}</span>
                             </button>
 
                             <button class="action save">
@@ -273,27 +273,27 @@ addData()
 
 // ////////////////////////////////////////////////////////
 
-// const videos = document.querySelectorAll('.reel video');
+const videos = document.querySelectorAll('.reel video');
 
-// const observer = new IntersectionObserver(
-//   entries => {
-//     entries.forEach(entry => {
-//       const video = entry.target;
+const observer = new IntersectionObserver(
+  entries => {
+    entries.forEach(entry => {
+      const video = entry.target;
 
-//       if (entry.isIntersecting) {
-//         video.play();
-//       } else {
-//         video.pause();
-//         video.currentTime = 0;
-//       }
-//     });
-//   },
-//   {
-//     threshold: 0.6,
-//   }
-// );
+      if (entry.isIntersecting) {
+        video.play();
+      } else {
+        video.pause();
+        video.currentTime = 0;
+      }
+    });
+  },
+  {
+    threshold: 0.6,
+  }
+);
 
-// videos.forEach(video => observer.observe(video));
+videos.forEach(video => observer.observe(video));
 
 // ////////////////////////////////////////////////////////
 
@@ -306,42 +306,42 @@ addData()
 
 
 
-// let reels = document.querySelectorAll('.reel');
-// let isMuted = true;
-// let isPlaying = true;   
+let reelss = document.querySelectorAll('.reel');
+let isMuted = true;
+let isPlaying = true;   
 
-// let muteButtons = document.querySelectorAll('.sound');
+let muteButtons = document.querySelectorAll('.sound');
 
-// reels.forEach(function (reel) {
-//   const muteBtn = reel.querySelector('.sound');
-//   muteBtn.addEventListener('click', function (e) {
-//     e.stopPropagation(); 
-//     isMuted = !isMuted;
-//     muteButtons.forEach(btn => {
-//       btn.innerHTML = isMuted
-//         ? `<i class="ri-volume-mute-fill"></i>`
-//         : `<i class="ri-volume-up-fill"></i>`;
-//     });
-//     document.querySelectorAll('.reel video').forEach(vid => {
-//       vid.muted = isMuted;
-//     });
-//   });
-
-
-// reel.addEventListener("click", function (e) {
-//     if (isPlaying) {
-//       event.target.pause();
-//       isPlaying = false;
-//       reel.childNodes[3].style.transform = `translate(-50%, -50%) scale(1)`;
-//     } else {
-//       event.target.play();
-//       isPlaying = true;
-//       reel.childNodes[3].style.transform = `translate(-50%, -50%) scale(0)`;
-//     }
-//   });
+reelss.forEach(function (reel) {
+  const muteBtn = reel.querySelector('.sound');
+  muteBtn.addEventListener('click', function (e) {
+    e.stopPropagation(); 
+    isMuted = !isMuted;
+    muteButtons.forEach(btn => {
+      btn.innerHTML = isMuted
+        ? `<i class="ri-volume-mute-fill"></i>`
+        : `<i class="ri-volume-up-fill"></i>`;
+    });
+    document.querySelectorAll('.reel video').forEach(vid => {
+      vid.muted = isMuted;
+    });
+  });
 
 
-// });
+reel.addEventListener("click", function (e) {
+    if (isPlaying) {
+      event.target.pause();
+      isPlaying = false;
+      reel.childNodes[3].style.transform = `translate(-50%, -50%) scale(1)`;
+    } else {
+      event.target.play();
+      isPlaying = true;
+      reel.childNodes[3].style.transform = `translate(-50%, -50%) scale(0)`;
+    }
+  });
+
+
+});
 
 
 
