@@ -95,7 +95,7 @@ let reels = [
     shareCount: 140,
     isLiked: true,
     isFollowed: false,
-    video: "/js/project8/videos/video9.mp4"
+    video: "/js/project8/videos/video10.mp4"
   },
   {
     username: "foodie_fun",
