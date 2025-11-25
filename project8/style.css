@@ -1,0 +1,289 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  color: white;
+}
+html,body{
+    width: 100%;
+    height: 100%;
+background-color: #000;
+}
+
+
+
+main{
+    height: 100%;
+    width: 100%;
+    background: linear-gradient(to right bottom, rgb(48, 48, 48), rgb(36, 36, 36));
+    padding: 1rem;
+}
+
+
+
+section{
+    overflow: hidden;
+    height: 100%;
+    width: 60vh;
+    margin: auto;
+    border-radius: 10px;
+    
+}
+
+.all-reels{
+  height: 100%;
+    width: 100%;
+    overflow: auto;
+    /* overflow: hidden; */
+    scroll-snap-type: y mandatory;
+}
+.all-reels::-webkit-scrollbar {
+  display: none;
+}
+
+.reel{
+  background-color: #000;
+      height: 100%;
+    width: 100%;
+    position: relative;
+    scroll-snap-align: start;
+    scroll-snap-stop: always;
+    overflow: hidden;
+}
+
+.main-video{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    /* overflow: auto; */
+    /* background-position: center; */
+}
+
+
+.bottom{
+    padding-bottom:0.7rem;
+
+    /* background: linear-gradient(red,crimson); */
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+
+.avatar{
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+    object-position: center;
+    cursor: pointer;
+}
+
+
+.user{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding:0 20px;
+
+}
+
+
+.follow{
+    border: 1px solid #ffffff;
+    padding: 0.5rem 1rem;
+    border-radius: 0.5rem;
+    outline: none;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+
+
+.description{
+  width: 320px;
+    padding: 0 20px;
+
+}
+
+
+
+#btn {
+  /* margin-top: 10px; */
+  /* padding: 6px 12px; */
+  border: none;
+  background: transparent;
+  color: #eaf1ffc4;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+
+.music-section{
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  /* background-color: red; */
+    /* padding:0 20px; */
+    padding-left: 20px;
+    padding-right: 10px;
+    
+
+}
+
+
+.music {
+  height: 30px;
+  width: 300px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  overflow: hidden;
+  background: #eeeeee11;
+  padding: 5px 8px;
+  border-radius: 1rem;
+}
+
+.music i {
+  font-size: 1rem;
+  flex-shrink: 0;        
+}
+
+.marquee {
+  overflow: hidden;
+  white-space: nowrap;
+  flex: 1;
+}
+
+.marquee-inner {
+  display: inline-block;
+  padding-left: 100%;     
+  animation: scroll 15s linear infinite;
+}
+
+@keyframes scroll {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}
+
+.music-avatar{
+    height: 40px;
+    width: 40px;
+    border-radius:10px;
+    border: 2px solid white;
+     object-fit: cover;
+    object-position: center;
+}
+
+
+
+
+
+.right{
+    position: absolute;
+    right: 8px;
+    bottom: 0;
+    transform: translateY(-25%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    z-index: 20;
+    
+}
+
+.reel-actions{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.1rem;
+    width: 100%;
+}
+
+.action{
+    border: none;
+    background: transparent;
+    color: #fff;
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+    cursor: pointer;
+    width: auto;
+    padding: 4px;
+    /* background-color: green; */
+    text-align: center;
+    outline: none;
+    /* height: 60px; */
+    gap: 5px;
+}
+
+.action i{
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    font-size: 1.7rem;
+}
+
+
+
+.more{
+  transform: rotate(90deg);
+}
+
+
+
+
+.redlove{
+  color: red;
+}
+
+
+.sound {
+  position: absolute;
+  right: 0;
+  top: 0;
+  margin: 10px;
+  width: 40px;
+  height: 40px;
+  background-color: rgba(90, 90, 90, 0.403);
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-size: 1.1rem;
+  cursor: pointer;
+  z-index: 1;
+}
+
+
+
+.play {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%) scale(0);
+  margin: 10px;
+  width: 90px;
+  height: 90px;
+  background-color: rgba(90, 90, 90, 0.403);
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-size: 2rem;
+  transition: all 0.3s;
+  z-index: 1;
+  pointer-events: none;
+  cursor: pointer;
+}
