@@ -189,7 +189,7 @@ section{
 
 .right{
     position: absolute;
-    right: 8px;
+    right: 2px;
     bottom: 0;
     transform: translateY(-25%);
     display: flex;
@@ -217,10 +217,8 @@ section{
     cursor: pointer;
     width: auto;
     padding: 4px;
-    /* background-color: green; */
     text-align: center;
     outline: none;
-    /* height: 60px; */
     gap: 5px;
 }
 
@@ -231,6 +229,11 @@ section{
     width: 40px;
     height: 40px;
     font-size: 1.7rem;
+    font-weight: 100;
+}
+
+.action H6{
+  font-size: 0.7rem;
 }
 
 
@@ -247,7 +250,7 @@ section{
 }
 
 
-.sound {
+.mute {
   position: absolute;
   right: 0;
   top: 0;
@@ -265,6 +268,10 @@ section{
   z-index: 1;
 }
 
+.mute>i{
+  pointer-events: none;
+
+}
 
 
 .play {
@@ -287,3 +294,31 @@ section{
   pointer-events: none;
   cursor: pointer;
 }
+
+
+
+
+
+
+
+
+
+
+
+.reel-actions>button H4{
+    pointer-events: none;
+}
+.reel-actions>button H6{
+    pointer-events: none;
+}
+
+
+
+
+
+
+
+
+
+
+
