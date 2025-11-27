@@ -10,10 +10,20 @@ background-color: #000;
 }
 
 
+:root{
+    --x:50%;
+    --y:50%;
+}
+
+
 main{
     height: 100%;
     width: 100%;
-
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
 }
 
 video{
@@ -21,3 +31,48 @@ video{
     height: 100%;
     object-fit: cover;
 }
+
+
+
+
+.ghost{
+    opacity: 1;
+    position: absolute;
+    top: 0;
+    z-index: 999;
+    height: 100%;
+    width: 100%;
+    background: radial-gradient(150px at var(--x) var(--y),transparent , black );
+    transition: all ease 1s;
+    pointer-events: none;
+}
+
+
+
+
+.text{
+    position: absolute;
+    background: linear-gradient(to right,rgb(152, 30, 30),rgb(255, 149, 0),rgb(190, 19, 4));
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    font-size: 4rem;
+    font-weight: 900;
+    font-family: Helvetica;
+    z-index: 1;
+    text-wrap: nowrap;
+    animation: textanimate cubic-bezier(.88,.92,.28,.28) 1.5s forwards infinite;
+    cursor: pointer;
+}
+
+@keyframes textanimate {
+    0%{
+        background-position: 0;
+    }
+    100%{
+        background-position: 500px;
+    }
+   
+}
+
+
