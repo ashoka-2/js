@@ -21,23 +21,24 @@ let text = document.querySelector(".text");
 let characters = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz"; 
 let interval = null;
 
-const ironman = text.innerText; 
+const mytext = text.innerText; 
+
 
 text.addEventListener("mouseenter", () => {
     clearInterval(interval);
-  let badho = 0;
+  let iteration = 0;
   interval = setInterval(() => {
-    text.innerText = ironman.split("").map((char, index) => {
-        if (index < badho) {
-          return ironman[index];
+    text.innerText = mytext.split("").map((char, index) => {
+        if (index < iteration) {
+          return char;
         }
         return characters[Math.floor(Math.random() * characters.length)];
       })
       .join("");
 
-    if (badho >= ironman.length) { 
+    if (iteration >= mytext.length) { 
       clearInterval(interval);
     }
-    badho += 1/3; 
+    iteration += 0.4; 
   }, 50);
 });

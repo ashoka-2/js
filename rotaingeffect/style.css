@@ -1,0 +1,117 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html,body{
+    width: 100%;
+    height: 100%;
+background-color: #000;
+}
+
+main{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+
+:root{
+  --ironman-color:rgb(255, 51, 0);
+}
+
+@property --rotate{
+  syntax: "<angle>";
+  initial-value: 0deg;
+  inherits: false;
+}
+
+@keyframes rotate {
+  from{
+    --rotate:0deg;
+  }
+  to{
+    --rotate:360deg;
+
+  }
+}
+
+
+
+
+
+.box{
+  height: 400px;
+  width: 300px;
+  display: flex;
+  padding-inline: 10px;
+  padding-bottom: 10px;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+  color: whitesmoke;
+  gap: 10px;
+  position: relative;
+  border-radius: 15px;
+  /* animation-iteration-count: infinite; */
+
+}
+
+.box>img{
+  height: 80%;
+  position: absolute;
+
+}
+.box>h1{
+  z-index: 1;
+  color: white;
+  font-family: monospace;
+  font-size: 3rem;
+  opacity: 0;
+}
+
+
+.box:hover{
+  box-shadow: 0 0 70px var(--ironman-color);
+
+  background: linear-gradient(black) padding-box,
+   conic-gradient(from var(--rotate),black,var(--ironman-color),black) border-box;
+  border: 5px solid rgba(228, 23, 228, 0);
+
+
+  animation: rotate 5s infinite linear;
+}
+.box:hover img{
+    animation: grow 500ms forwards cubic-bezier(.12,1.95,.42,.85);
+}
+
+@keyframes grow {
+  from{
+    height: 80%;
+  }
+  to{
+    height: 110%;
+
+  }
+}
+
+
+
+.box:hover h1{
+  /* opacity: 1; */
+  animation: opa 500ms forwards linear;
+}
+
+
+
+@keyframes opa {
+  from{
+    opacity: 0;
+  }
+  to{
+    opacity: 1;
+  }
+}
