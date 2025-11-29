@@ -41,6 +41,19 @@ main{
 
 
 
+.box>img{
+  height: 80%;
+  position: absolute;
+
+}
+.box>h1{
+  z-index: 1;
+  color: white;
+  font-family: monospace;
+  font-size: 3rem;
+  /* opacity: 0; */
+}
+
 
 
 .box{
@@ -56,34 +69,29 @@ main{
   gap: 10px;
   position: relative;
   border-radius: 15px;
+   box-shadow: 0 0 0px var(--ironman-color);
+
+  background: linear-gradient(black) padding-box,
+   conic-gradient(from var(--rotate),black,var(--ironman-color),black) border-box;
+  border: 0px solid rgba(228, 23, 228, 0);
+
+  text-shadow: 0 0 0px var(--ironman-color);
+  animation: rotate 5s infinite linear;
   /* animation-iteration-count: infinite; */
-
-}
-
-.box>img{
-  height: 80%;
-  position: absolute;
-
-}
-.box>h1{
-  z-index: 1;
-  color: white;
-  font-family: monospace;
-  font-size: 3rem;
-  opacity: 0;
+  transition: all linear 0.3s;
+  animation-play-state: paused;
 }
 
 
 .box:hover{
-  box-shadow: 0 0 70px var(--ironman-color);
-
-  background: linear-gradient(black) padding-box,
-   conic-gradient(from var(--rotate),black,var(--ironman-color),black) border-box;
-  border: 5px solid rgba(228, 23, 228, 0);
-
-
-  animation: rotate 5s infinite linear;
+  border-width:5px ;
+  animation-play-state: running;
+   box-shadow: 0 0 70px var(--ironman-color);
+  text-shadow: 0 0 10px var(--ironman-color);
 }
+
+
+
 .box:hover img{
     animation: grow 500ms forwards cubic-bezier(.12,1.95,.42,.85);
 }
@@ -101,17 +109,9 @@ main{
 
 
 .box:hover h1{
-  /* opacity: 1; */
-  animation: opa 500ms forwards linear;
+  color: var(--ironman-color);
+
 }
 
 
 
-@keyframes opa {
-  from{
-    opacity: 0;
-  }
-  to{
-    opacity: 1;
-  }
-}
