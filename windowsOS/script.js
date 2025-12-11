@@ -167,22 +167,22 @@ app.addEventListener("click",function(args){
     }
     
     if(action == "File Explorer"){
-        openIframeWindow("File Explorer",'')       
+        openIframeWindow("File Explorer",'','images/folder.png')       
     }
     if(action == "Settings"){
-        openIframeWindow("Settings",'')       
+        openIframeWindow("Settings",'','images/settings.png')       
     }
     if(action == "Microsoft Edge"){
-        openIframeWindow("Microsoft Edge",'https://www.bing.com')       
+        openIframeWindow("Microsoft Edge",'https://www.bing.com','images/edge.png')       
     }
     if(action == "Microsoft Store"){
-        openIframeWindow("Microsoft Store",'')       
+        openIframeWindow("Microsoft Store",'','images/store.png')       
     }
     if(action == "Vs Code"){
-        openIframeWindow("VS Code",'')       
+        openIframeWindow("VS Code",'','images/vscode.png')       
     }
     if(action == "Spotify"){
-        openIframeWindow("Spotify",'https://open.spotify.com/embed/playlist/37i9dQZF1DXcBWIGoYBM5M')       
+        openIframeWindow("Spotify",'https://open.spotify.com/embed/playlist/37i9dQZF1DXcBWIGoYBM5M',"images/spotify.png")       
     }
 
 })
@@ -198,40 +198,40 @@ homeapp.addEventListener("click",function(args){
         openIframeWindow("Google Chrome", "https://www.google.com/webhp?igu=1",'images/chrome.png');
     }
      if(action == "File Explorer"){
-        openIframeWindow("File Explorer",'')       
+        openIframeWindow("File Explorer",'','images/folder.png')       
     }
     if(action == "Settings"){
-        openIframeWindow("Settings",'')       
+        openIframeWindow("Settings",'','images/settings.png')       
     }
     if(action == "Edge"){
-        openIframeWindow("Microsoft Edge",'https://www.bing.com')       
+        openIframeWindow("Microsoft Edge",'https://www.bing.com','images/edge.png')       
     }
     if(action == "Store"){
-        openIframeWindow("Microsoft Store",'')       
+        openIframeWindow("Microsoft Store",'','images/store.png')       
     }
     if(action == "VS Code"){
-        openIframeWindow("VS Code",'')       
+        openIframeWindow("VS Code",'','images/vscode.png')       
     }
     if(action == "Spotify"){
-        openIframeWindow("Spotify",'https://open.spotify.com/embed/playlist/37i9dQZF1DXcBWIGoYBM5M')       
+        openIframeWindow("Spotify",'https://open.spotify.com/embed/playlist/37i9dQZF1DXcBWIGoYBM5M',"images/spotify.png")       
     }
     if(action == "Twitter"){
-        openIframeWindow("Twitter",'')       
+        openIframeWindow("Twitter",'','images/twitter.png')       
     }
     if(action == "Calculator"){
-        openIframeWindow("Calculator",'')       
+        openIframeWindow("Calculator",'','images/calculator.png')       
     }
     if(action == "Terminal"){
-        openIframeWindow("Terminal",'')       
+        openIframeWindow("Terminal",'','images/terminal.png')       
     }
     if(action == "Github"){
-        openIframeWindow("Github",'https://github.com/ashoka-2')       
+        openIframeWindow("Github",'https://github.com/ashoka-2','images/github.png')       
     }
     if(action == "This PC"){
-        openIframeWindow("This PC",'')       
+        openIframeWindow("This PC",'','images/thispc')       
     }
     if(action == "Recycle Bin"){
-        openIframeWindow("Recycle Bin",'')       
+        openIframeWindow("Recycle Bin","",'images/bin0.png')       
     }
     
 })
